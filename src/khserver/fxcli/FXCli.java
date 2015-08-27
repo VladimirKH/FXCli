@@ -33,8 +33,8 @@ public class FXCli extends Application {
         Scene scene = new Scene(root);
         SplitPane mainSplitPane = (SplitPane) scene.lookup("#MainSplitPane");
         mainSplitPane.setPrefSize(bounds.getWidth() * 0.8, bounds.getHeight() * 0.8);
-        AnchorPane mainAreaNode = (AnchorPane) scene.lookup("#MainSplitLeftAnchorPane");
-        setMainBorderPaneCenterDefault(mainAreaNode);
+        AnchorPane node = (AnchorPane) mainSplitPane.getItems().get(0);
+        setMainBorderPaneCenterDefault(node);
         
         stage.setScene(scene);
         stage.setTitle("FXCli");
@@ -52,9 +52,8 @@ public class FXCli extends Application {
     public void setMainBorderPaneCenter(AnchorPane node, String name) throws IOException {
         URL location = getClass().getResource("view/FXML" + name + ".fxml");
         FXMLLoader fxmlLoader = new FXMLLoader(location);
-        Node fxmlNode;
-        fxmlNode = (Node) fxmlLoader.load();
-        return;
+        Node fxmlNode = (Node) fxmlLoader.load();
+        node.setTopAnchor(fxmlNode, 10.0);
     }
 
     /**
