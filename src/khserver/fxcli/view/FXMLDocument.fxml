@@ -34,9 +34,9 @@
                 <Button mnemonicParsing="false" text="Button" />
               </items>
             </ToolBar>
-            <SplitPane id="MainSplitPane" dividerPositions="0.8434343434343434" minHeight="400.0" minWidth="600.0">
+            <SplitPane id="MainSplitPane" dividerPositions="0.5" minHeight="400.0" minWidth="600.0">
               <items>
-                <AnchorPane id="MainSplitLeftAnchorPane" minHeight="300.0" minWidth="500.0" />
+                  <Pane prefHeight="398.0" prefWidth="434.0" />
                 <AnchorPane id="MainSplitRightAnchorPane" minHeight="300.0" minWidth="100.0" />
               </items>
             </SplitPane>

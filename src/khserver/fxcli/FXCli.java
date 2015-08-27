@@ -14,7 +14,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.SplitPane;
-import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.Pane;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
 
@@ -33,7 +33,7 @@ public class FXCli extends Application {
         Scene scene = new Scene(root);
         SplitPane mainSplitPane = (SplitPane) scene.lookup("#MainSplitPane");
         mainSplitPane.setPrefSize(bounds.getWidth() * 0.8, bounds.getHeight() * 0.8);
-        AnchorPane node = (AnchorPane) mainSplitPane.getItems().get(0);
+        Pane node = (Pane) mainSplitPane.getItems().get(0);
         setMainBorderPaneCenterDefault(node);
         
         stage.setScene(scene);
@@ -41,19 +41,19 @@ public class FXCli extends Application {
         stage.show();
     }
 
-    public void setMainBorderPaneCenterDefault(AnchorPane node) throws IOException {
+    public void setMainBorderPaneCenterDefault(Pane node) throws IOException {
         setMainBorderPaneCenterBrowser(node);
     }
 
-    public void setMainBorderPaneCenterBrowser(AnchorPane node) throws IOException {
+    public void setMainBorderPaneCenterBrowser(Pane node) throws IOException {
         setMainBorderPaneCenter(node, "Browser");
     }
 
-    public void setMainBorderPaneCenter(AnchorPane node, String name) throws IOException {
+    public void setMainBorderPaneCenter(Pane node, String name) throws IOException {
         URL location = getClass().getResource("view/FXML" + name + ".fxml");
         FXMLLoader fxmlLoader = new FXMLLoader(location);
         Node fxmlNode = (Node) fxmlLoader.load();
-        node.setTopAnchor(fxmlNode, 10.0);
+        node.getChildren().add(fxmlNode);
     }
 
     /**
