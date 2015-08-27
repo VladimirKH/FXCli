@@ -1,0 +1,11 @@
+# phpstorm project files
+.idea
+
+# netbeans project files
+nbproject
+
+# project build files
+build
+dist
+build.xml
+manifest.mf
