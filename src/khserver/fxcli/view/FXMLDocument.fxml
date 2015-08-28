@@ -36,8 +36,8 @@
             </ToolBar>
             <SplitPane id="MainSplitPane" dividerPositions="0.5" minHeight="400.0" minWidth="600.0">
               <items>
-                  <Pane prefHeight="398.0" prefWidth="434.0" />
-                <AnchorPane id="MainSplitRightAnchorPane" minHeight="300.0" minWidth="100.0" />
+                  <Pane />
+                <AnchorPane minHeight="300.0" minWidth="100.0" />
               </items>
             </SplitPane>
          </children>

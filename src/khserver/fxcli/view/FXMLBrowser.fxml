@@ -10,7 +10,7 @@
    <top>
       <VBox BorderPane.alignment="CENTER">
          <children>
-            <ToolBar>
+            <ToolBar maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
               <items>
                 <Button mnemonicParsing="false" text="&lt;-" />
                 <Button mnemonicParsing="false" text="-&gt;" />
